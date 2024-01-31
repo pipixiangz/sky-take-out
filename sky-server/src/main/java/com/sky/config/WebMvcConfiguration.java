@@ -77,7 +77,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * 扩展SpringMVC框架的消息转换器
      * @param converters
      */
-    @Override
     protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         log.info("扩展消息转换器...");
         //创建一个消息转换器对象
