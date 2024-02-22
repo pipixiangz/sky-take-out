@@ -73,7 +73,6 @@ public class DishServiceImpl implements DishService {
      * 菜品批量删除
      * @param ids
      */
-    @Override
     @Transactional
     public void deleteBatch(List<Long> ids) {
         //判断当前菜品是否能够删除---是否存在起售中的菜品？？
