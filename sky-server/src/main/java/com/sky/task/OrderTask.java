@@ -22,8 +22,8 @@ public class OrderTask {
     /**
      * 处理支付超时订单
      */
-    //@Scheduled(cron = "0 * * * * ?") // 每分钟触发一次
-    @Scheduled(cron = "1/5 * * * * ?")  //一分钟一次太慢了，所以改成5s一次，错开
+    @Scheduled(cron = "0 * * * * ?") // 每分钟触发一次
+    //@Scheduled(cron = "1/5 * * * * ?")  //一分钟一次太慢了，所以改成5s一次，错开
     public void processTimeoutOrder(){
         log.info("定时处理支付超时订单：{}", LocalDateTime.now());
 
@@ -43,8 +43,8 @@ public class OrderTask {
     /**
      * 处理“派送中”状态的订单
      */
-    //@Scheduled(cron = "0 0 1 * * ?")
-    @Scheduled(cron = "0/5 * * * * ?")  //凌晨一点不容易一直跑着程序，所以改成5s一次
+    @Scheduled(cron = "0 2 * * * ?")
+    //@Scheduled(cron = "0/5 * * * * ?")  //凌晨一点不容易一直跑着程序，所以改成5s一次
     public void processDeliveryOrder(){
         log.info("处理派送中订单：{}", LocalDateTime.now());
         // select * from orders where status = 4 and order_time < 当前时间-1小时
