@@ -8,8 +8,8 @@ sky:
     password: 085258
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5tQFHSjHVC7RRsJ6iMBh
-    access-key-secret: 6E9N6ST4YYqONTjHcpd1QAUXcXN258
+    access-key-id: 
+    access-key-secret: 
     bucket-name: sky-itcast-ppx
   redis:
     host: localhost
